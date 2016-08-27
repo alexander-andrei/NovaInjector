@@ -7,11 +7,11 @@ namespace NovaInjector
 {
     public class TestClass
     {
-        private string _o;
+        private InjectionTest _o;
         private string _t;
         private string _z;
 
-        public TestClass(string o, string t, string z)
+        public TestClass(InjectionTest o, string t, string z)
         {
             _o = o;
             _t = t;
@@ -20,7 +20,7 @@ namespace NovaInjector
 
         public string SUPERTEST()
         {
-            return _o + _t + _z;
+            return _o.test();
         }
     }
 }
